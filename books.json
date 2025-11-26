@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Deceptions",
+    "author": "Judith Michael"
+  },
+  {
+    "id": 2,
+    "title": "A tangled web",
+    "author": "Judith Michael"
+  },
+  {
+    "id": 3,
+    "title": "Educated",
+    "author": "Tara Westover"
+  },
+  {
+    "id": 4,
+    "title": "Where the Crawdads Sing",
+    "author": "Delia Owens"
+  },
+  {
+    "id": 5,
+    "title": "Little Fires Everywhere",
+    "author": "Celia Ng"
+  },
+  {
+    "id": 6,
+    "title": "Normal People",
+    "author": "Sally Rooney"
+  },
+  {
+    "id": 7,
+    "title": "The Girl With The Dragon Tatto",
+    "author": "Stieg Larrson"
+  }
+]
