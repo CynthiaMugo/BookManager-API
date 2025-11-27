@@ -12,6 +12,7 @@ A RESTful API built in **Go** using [Gin](https://github.com/gin-gonic/gin) for 
 - **Delete books** by ID
 - **Persistent storage** using a JSON file (`books.json`)
 - Built with **Gin** for fast, simple REST API development
+- **Swagger UI documentation** at `/swagger/index.html`
 
 ---
 
@@ -29,17 +30,36 @@ git clone git@github.com:CynthiaMugo/BookManager-API.git
 cd BookManager-API
 ```
 
-### Install Gin
+### Install Dependencies
+#### Gin
 ```
 go get github.com/gin-gonic/gin
 go mod tidy
+```
+
+#### Swagger(Swaggo)
+```
+go install github.com/swaggo/swag/cmd/swag@latest
+go get github.com/swaggo/files
+go get github.com/swaggo/gin-swagger
+```
+Generate Swagger docs
+```
+swag init
 ```
 
 ### Running the API
 ```
 go run .
 ```
-The server will start on port 8080. You can now test endpoints using Postman or curl.
+
+Your server will start on:
+
+http://localhost:8080
+
+Swagger UI is available at:
+
+ http://localhost:8080/swagger/index.html
 
 ## Endpoints
 
@@ -86,11 +106,13 @@ DELETE /books/1
 ```
 BookManager-API/
 │
-├── books/            # Core book logic
+├── books/               # Core book logic (model + utilities)
 │   └── books.go
-├── main.go           # API entry point
-├── data.go           # JSON save/load functionality
-└── books.json        # Persisted library data
+├── docs/                # Auto-generated Swagger files
+├── main.go              # API entry point + routes
+├── data.go              # JSON load/save functionality
+└── books.json           # Persistent data store
+
 ```
 
 ## License
